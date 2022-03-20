@@ -47,11 +47,11 @@ border-radius: 10px;
 }
 
 #button3 {
-    background: pink;
+    background: lightcoral;
 }
 
 #button3:active, #button3.lit {
-    background:red;
+    background:firebrick;
 }
 
 #button4 {
@@ -63,7 +63,7 @@ border-radius: 10px;
 }
 
 #button5 {
-  background: orchid;
+  background: plum;
 }
 
 #button5:active, #button5.lit {
