@@ -1,6 +1,6 @@
-# Pre-work - *Memory Game*
+# Pre-work - *Animal Memory*
 
-**Memory Game** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
+**Animal Memory** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
 
 Submitted by: **Mehul Aneja**
 
