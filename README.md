@@ -34,13 +34,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app!
 * [x] Separate lost game message if you lost because you ran out of time
 * [x] Buttons "pop" when clicked.
-All boxes become green and glowy/happy when you win and red and hazy/sad when you lose
-button to choose easy or hard mode toggle:
-    button to control number of buttons
-    button to control if game is sped up or not
+* [x] Button to toggle easy/hard mode to control whether game speeds up
 
 ## Video Walkthrough (GIF)
 

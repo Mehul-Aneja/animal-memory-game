@@ -26,13 +26,17 @@ function startGame() {
 }
 
 function enableHardMode() {
+  hardMode = true;
   document.getElementById("easyBtn").classList.add("hidden");
   document.getElementById("hardBtn").classList.remove("hidden");
+  stopGame();
 }
 
 function enableEasyMode() {
+  hardMode = false;
   document.getElementById("easyBtn").classList.remove("hidden");
   document.getElementById("hardBtn").classList.add("hidden");
+  stopGame();
 }
 
 function stopGame() {
@@ -149,8 +153,10 @@ function guess(btn) {
       } else {
         //Pattern correct. Add next segment
         progress++;
-        if (clueHoldTime > 100)
-        clueHoldTime -= 100;
+        if (hardMode == true) { 
+          if (clueHoldTime > 100)
+            clueHoldTime -= 100;
+        }
         playClueSequence();
       }
     } else {
