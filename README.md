@@ -4,7 +4,7 @@
 
 Submitted by: **Mehul Aneja**
 
-Time spent: **9** hours spent in total
+Time spent: **10** hours spent in total
 
 Link to project: https://glitch.com/edit/#!/puzzling-deluxe-haddock
 
@@ -44,14 +44,25 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-![](gif1-link-here) Gif showing interface and button functionality
-![](gif2-link-here) Gif showing winning on easy mode
-![](gif3-link-here) Gif showing losing on hard mode
-![](gif4-link-here)
+Interface and button interactivity
+![](https://i.imgur.com/b5xlXK1.gif)
+
+Winning
+![](https://i.imgur.com/6rPHgNd.gif) 
+
+Losing because of time run out
+![](https://i.imgur.com/s5pYgU1.gif)
+
+Losing because of mistakes
+![](https://i.imgur.com/dMCRXEN.gif)
+
+
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-[YOUR ANSWER HERE]
+
+For images and reference material:
+    
 https://www.freeiconspng.com/images/dog-png
 https://www.pikpng.com/pngvi/TJTTTb_surprised-cat-480-1058-yawning-cat-transparent-background-clipart/
 https://www.seekpng.com/ima/u2q8r5e6q8e6o0q8/
@@ -65,13 +76,23 @@ https://programminghead.com/how-to-play-audio-in-html-using-javascript/
 https://www.w3schools.com/jsref/met_win_setinterval.asp
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+
+Setting up a countdown timer was proving to be a difficult task for me since I am still in the process of learning JavaScript and was fairly unfamiliar with the setInterval(), clearInterval() and the setTimeout(), clearTimeout() methods. As suggested in the pre-work, I read up on both the methods and tried implementing them in the game. At first, I was very confused about where to place it so it began and stopped at the correct time. Moreover, as per my initial placement, I was running into an issue where the timer would start right as the pattern began playing instead of when the pattern ended. Through a lot of trial and error, I figured out that adding the ‘delay’ variable to the timer ensured that the countdown timer ended after the specified time for each pattern round. 
+
+I also realized that there was a requirement for the clearInterval() method in more than one place, depending on whether the user made a mistake or guessed correctly. I solved this issue majorly through trial and error and it consumed a large chunk of my time. I also ran into some difficulty while adding a hard mode for the game. More specifically, I was running into issues while trying to toggle the hard mode due to a small error. I retraced my steps and reread the code I had most recently added and after a while I discovered that I had forgotten to initialize the hardMode variable while declaring it which led to some runtime errors.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+After working on this pre-work project where I haven’t used any frameworks or JS libraries, I am curious to know how much flexibility and versatility standard JavaScript and HTML/CSS offer as compared to a library for JavaScript such as React which makes it much easier to have reusable UI components. I believe I’ll learn more about this as the current spring semester progresses since I’m currently enrolled in a class called Agile Software Development and DevOps which is allowing me to delve deeper into these topics and also allows me to learn through application since I’m required to work with other students on a particular semester-long project. 
+
+I want to know the extent to which I can customize HTML components such as buttons and also if there are other languages which I could use alongside these 3 to further complement my project. I have slight familiarity with PHP and am aware of database languages to store data on servers. I believe these could also be used in similar projects.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+If I had more hours to work on this project, I would try to refactor the functions responsible for playing the tunes when buttons are clicked. I would like to try to rewrite them more concisely to make the code more readable and user-friendly, and less wordy. 
+
+As for additional features, I’d like to add a button to control the number of animal buttons, maybe wire it as part of the easy/hard mode button. Make the game more animal themed by changing the background to an animal-themed one. When the user wins the game, all the animal buttons could light up and glow green, or red when the user loses the game.
+
 
 
 
@@ -95,5 +116,7 @@ https://www.w3schools.com/jsref/met_win_setinterval.asp
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+
 
 
