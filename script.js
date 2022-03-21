@@ -25,20 +25,6 @@ function startGame() {
   playClueSequence();
 }
 
-function enableHardMode() {
-  hardMode = true;
-  document.getElementById("easyBtn").classList.add("hidden");
-  document.getElementById("hardBtn").classList.remove("hidden");
-  stopGame();
-}
-
-function enableEasyMode() {
-  hardMode = false;
-  document.getElementById("easyBtn").classList.remove("hidden");
-  document.getElementById("hardBtn").classList.add("hidden");
-  stopGame();
-}
-
 function stopGame() {
   gamePlaying = false;
   clearInterval(timer);
@@ -177,10 +163,19 @@ function guess(btn) {
 }
 
 function getRandomIntInclusive() {
-  var min = 1;
-  var max = 5;
-  return Math.floor(Math.random() * (5) + 1); //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (5) + 1); 
 }
 
+function enableHardMode() {
+  hardMode = true;
+  document.getElementById("easyBtn").classList.add("hidden");
+  document.getElementById("hardBtn").classList.remove("hidden");
+  stopGame();
+}
 
-
+function enableEasyMode() {
+  hardMode = false;
+  document.getElementById("easyBtn").classList.remove("hidden");
+  document.getElementById("hardBtn").classList.add("hidden");
+  stopGame();
+}

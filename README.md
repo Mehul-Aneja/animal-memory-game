@@ -4,7 +4,7 @@
 
 Submitted by: **Mehul Aneja**
 
-Time spent: **6** hours spent in total
+Time spent: **9** hours spent in total
 
 Link to project: https://glitch.com/edit/#!/puzzling-deluxe-haddock
 
@@ -35,15 +35,18 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [x] Separate lost game message if you lost because you ran out of time
-* [x] Buttons "pop" when clicked.
-* [x] Button to toggle easy/hard mode to control whether game speeds up
+* [x] Buttons "pop" when clicked
+* [x] Button to toggle easy/hard mode
+* [x] Easy Mode with consistent playback speed
+* [x] Hard Mode with faster playback speed after every round
 
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![](gif1-link-here)
-![](gif2-link-here)
-![](gif3-link-here)
+
+![](gif1-link-here) Gif showing interface and button functionality
+![](gif2-link-here) Gif showing winning on easy mode
+![](gif3-link-here) Gif showing losing on hard mode
 ![](gif4-link-here)
 
 ## Reflection Questions
