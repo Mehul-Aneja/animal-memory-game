@@ -102,7 +102,7 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  timer = setInterval(loseGametime,delay+10000);
+  timer = setInterval(loseGametime,delay+12000);
 }
 
 function loseGame() {
