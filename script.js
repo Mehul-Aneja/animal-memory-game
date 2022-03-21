@@ -3,7 +3,7 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 //Global Variables
 var clueHoldTime = 1000; //how long to hold each clue's light/sound
-var pattern = [getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive()];
+var pattern;
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
@@ -15,6 +15,11 @@ var hardMode = false;
 
 function startGame() {
   //initialize game variables
+  if (hardMode) {
+    pattern = [getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive()];
+  } else {
+    pattern = [getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive(), getRandomIntInclusive()];
+  }
   progress = 0;
   gamePlaying = true;
   clueHoldTime = 1000;
@@ -23,20 +28,6 @@ function startGame() {
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   playClueSequence();
-}
-
-function enableHardMode() {
-  hardMode = true;
-  document.getElementById("easyBtn").classList.add("hidden");
-  document.getElementById("hardBtn").classList.remove("hidden");
-  stopGame();
-}
-
-function enableEasyMode() {
-  hardMode = false;
-  document.getElementById("easyBtn").classList.remove("hidden");
-  document.getElementById("hardBtn").classList.add("hidden");
-  stopGame();
 }
 
 function stopGame() {
@@ -182,5 +173,20 @@ function getRandomIntInclusive() {
   return Math.floor(Math.random() * (5) + 1); //The maximum is inclusive and the minimum is inclusive
 }
 
+function enableHardMode() {
+  hardMode = true;
+  document.getElementById("easyBtn").classList.add("hidden");
+  document.getElementById("hardBtn").classList.remove("hidden");
+  document.getElementById("button5").classList.remove("hidden");
+  stopGame();
+}
+
+function enableEasyMode() {
+  hardMode = false;
+  document.getElementById("easyBtn").classList.remove("hidden");
+  document.getElementById("hardBtn").classList.add("hidden");
+  document.getElementById("button5").classList.add("hidden");
+  stopGame();
+}
 
 
