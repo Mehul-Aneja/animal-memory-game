@@ -11,6 +11,7 @@ var volume = 0.5; //must be between 0.0 and 1.0
 var guessCounter = 0;
 var mistakes = 0;
 var timer;
+var hardMode = false;
 
 function startGame() {
   //initialize game variables
@@ -22,6 +23,16 @@ function startGame() {
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   playClueSequence();
+}
+
+function enableHardMode() {
+  document.getElementById("easyBtn").classList.add("hidden");
+  document.getElementById("hardBtn").classList.remove("hidden");
+}
+
+function enableEasyMode() {
+  document.getElementById("easyBtn").classList.remove("hidden");
+  document.getElementById("hardBtn").classList.add("hidden");
 }
 
 function stopGame() {
@@ -164,4 +175,6 @@ function getRandomIntInclusive() {
   var max = 5;
   return Math.floor(Math.random() * (5) + 1); //The maximum is inclusive and the minimum is inclusive
 }
+
+
 
