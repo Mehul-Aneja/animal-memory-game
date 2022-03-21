@@ -11,7 +11,7 @@ body {
   margin: 2em;
   font-family: verdana, arial, sans-serif; 
     line-height: 1.5;
-  background-color: slategrey;
+  background-color: slategray;
   color: white; 
 }
 
@@ -22,6 +22,12 @@ h1 {
 button {
   padding: 10px;
 border-radius: 10px;
+}
+
+img {
+  display:none;
+  width:200px;
+  height:200px;
 }
 
 #gameButtonArea > button {
@@ -35,7 +41,7 @@ border-radius: 10px;
 }
 
 #button1:active, #button1.lit {
-    background:green;
+  background:green;
 }
 
 #button2 {

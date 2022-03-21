@@ -9,12 +9,14 @@ var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; //must be between 0.0 and 1.0
 var guessCounter = 0;
+var mistakes = 0;
 
 function startGame() {
   //initialize game variables
   progress = 0;
   gamePlaying = true;
   clueHoldTime = 1000;
+  mistakes = 0;
   // swap the Start and Stop buttons
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -45,6 +47,8 @@ function playTone(btn, len) {
   }, len);
 }
 function startTone(btn) {
+  document.getElementById("img"+btn).style.display='block';
+  document.getElementById("animal"+btn).play();
   if (!tonePlaying) {
     context.resume();
     o.frequency.value = freqMap[btn];
@@ -53,9 +57,10 @@ function startTone(btn) {
     tonePlaying = true;
   }
 }
-function stopTone() {
+function stopTone(btn) {
   g.gain.setTargetAtTime(0, context.currentTime + 0.05, 0.025);
   tonePlaying = false;
+  document.getElementById("img"+btn).style.display='none'; 
 }
 
 // Page Initialization
@@ -95,8 +100,6 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  if (clueHoldTime > 100)
-    clueHoldTime -= 100;
 }
 
 function loseGame() {
@@ -111,7 +114,6 @@ function winGame() {
 
 function guess(btn) {
   console.log("user guessed: " + btn);
-
   if (!gamePlaying) {
     return;
   }
@@ -125,6 +127,8 @@ function guess(btn) {
       } else {
         //Pattern correct. Add next segment
         progress++;
+        if (clueHoldTime > 100)
+        clueHoldTime -= 100;
         playClueSequence();
       }
     } else {
@@ -133,8 +137,13 @@ function guess(btn) {
     }
   } else {
     //Guess was incorrect
+    mistakes++;
+    alert("You made a mistake! Mistakes made: " + mistakes);
     //GAME OVER: LOSE!
-    loseGame();
+    if (mistakes > 3) {
+      loseGame();
+    }
+    playClueSequence();
   }
 }
 

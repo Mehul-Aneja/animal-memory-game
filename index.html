@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-    <title>Hello world!</title>
+    <title>Animal Memory Game!</title>
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
@@ -15,23 +15,29 @@
   </head>
   <body>
     <!-- this is the start of content -->
+    <audio src="Assets/bark.mp3" id="animal1"></audio>
+    <audio src="Assets/meow.mp3" id="animal2"></audio>
+    <audio src="Assets/growl.mp3" id="animal3"></audio>
+    <audio src="Assets/squeak.mp3" id="animal4"></audio>
+    <audio src="Assets/bleat.mp3" id="animal5"></audio>
+
     <h1>
-      Sound and Light Memory Game!
+      Animal Memory Game!
     </h1>
     <p>
-      Welcome to the Sound and Light Memory Game! Win the game by
-      pressing the buttons in the order in which they glow up.
+      Welcome to the Animal Memory Game! Win the game by pressing the buttons in the order in which they glow up. 
+      You lose after three mistake. The pattern will play after every mistake. The game speeds up after every round.
     </p>
     <button id="startBtn" onclick="startGame()">Start</button>
     <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
     
     <div id="gameButtonArea">
       
-        <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
-        <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
-        <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
-        <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
-        <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()"></button>
+        <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone(1)"><img id="img1" src="Assets/dog.png" alt="Dog"></button>
+        <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone(2)"><img id="img2" src="Assets/cat.png" alt="Cat"></button>
+        <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone(3)"><img id="img3" src="Assets/bear.png" alt="Bear"></button>
+        <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone(4)"><img id="img4" src="Assets/rat.png" alt="Rat"></button>
+        <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone(5)"><img id="img5" src="Assets/goat.png" alt="Goat"></button>
       
     </div>
   </body>
