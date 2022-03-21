@@ -4,7 +4,7 @@
 
 Submitted by: **Mehul Aneja**
 
-Time spent: **4** hours spent in total
+Time spent: **6** hours spent in total
 
 Link to project: https://glitch.com/edit/#!/puzzling-deluxe-haddock
 
@@ -28,14 +28,14 @@ The following **optional** features are implemented:
 * [x] Playback speeds up on each turn
 * [x] Computer picks a different pattern each time the game is played
 * [x] Player only loses after 3 mistakes (instead of on the first mistake)
-* [ ] Game button appearance change goes beyond color (e.g. add an image)
-* [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
+* [x] Game button appearance change goes beyond color (e.g. add an image)
+* [x] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
 * [ ] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app!
-Mistakes play a wrong indicator tone
+* [x] Separate lost game message if you lost because you ran out of time
 All boxes become green and glowy/happy when you win and red and hazy/sad when you lose
 button to choose easy or hard mode toggle:
     button to control number of buttons
@@ -52,9 +52,17 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 [YOUR ANSWER HERE]
+https://www.freeiconspng.com/images/dog-png
+https://www.pikpng.com/pngvi/TJTTTb_surprised-cat-480-1058-yawning-cat-transparent-background-clipart/
+https://www.seekpng.com/ima/u2q8r5e6q8e6o0q8/
+https://www.meme-arsenal.com/en/create/template/474787
+https://pngset.com/download-free-png-ycctp
+https://stackoverflow.com/questions/20869401/display-an-image-only-when-button-is-clicked
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 https://www.w3schools.com/tags/tag_img.asp
 https://www.thesitewizard.com/css/hide-images-on-mobile-website.shtml
+https://programminghead.com/how-to-play-audio-in-html-using-javascript/
+https://www.w3schools.com/jsref/met_win_setinterval.asp
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 [YOUR ANSWER HERE]

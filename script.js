@@ -10,6 +10,7 @@ var tonePlaying = false;
 var volume = 0.5; //must be between 0.0 and 1.0
 var guessCounter = 0;
 var mistakes = 0;
+var timer;
 
 function startGame() {
   //initialize game variables
@@ -25,6 +26,7 @@ function startGame() {
 
 function stopGame() {
   gamePlaying = false;
+  clearInterval(timer);
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
 }
@@ -100,11 +102,19 @@ function playClueSequence() {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
+  timer = setInterval(loseGametime,delay+10000);
 }
 
 function loseGame() {
+  clearInterval(timer);
   stopGame();
-  alert("Game Over. You lost.");
+  alert("Game Over. You made more than 3 mistakes and lost.");
+}
+
+function loseGametime() {
+  clearInterval(timer);
+  stopGame();
+  alert("Game Over. You ran out of time and lost.");
 }
 
 function winGame() {
@@ -121,6 +131,7 @@ function guess(btn) {
   if (pattern[guessCounter] == btn) {
     //Guess was correct!
     if (guessCounter == progress) {
+      clearInterval(timer);
       if (progress == pattern.length - 1) {
         //GAME OVER: WIN!
         winGame();
@@ -136,6 +147,7 @@ function guess(btn) {
       guessCounter++;
     }
   } else {
+    clearInterval(timer);
     //Guess was incorrect
     mistakes++;
     alert("You made a mistake! Mistakes made: " + mistakes);
@@ -147,9 +159,9 @@ function guess(btn) {
   }
 }
 
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive() {
   var min = 1;
   var max = 5;
-  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (5) + 1); //The maximum is inclusive and the minimum is inclusive
 }
 
