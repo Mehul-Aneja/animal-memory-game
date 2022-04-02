@@ -14,7 +14,7 @@ var timer;
 var hardMode = false;
 
 function startGame() {
-  //initialize game variable
+  //initialize game variables
   progress = 0;
   gamePlaying = true;
   clueHoldTime = 1000;

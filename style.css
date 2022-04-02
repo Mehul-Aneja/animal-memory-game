@@ -12,7 +12,7 @@ body {
   font-family: verdana, arial, sans-serif; 
     line-height: 1.5;
   background-color: slategray;
-  color: white;  
+  color: white; 
 }
 
 h1 {
@@ -77,6 +77,6 @@ img {
 }
 
 
-.hidden  {
+.hidden {
   display:none;
 }

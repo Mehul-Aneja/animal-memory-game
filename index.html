@@ -15,39 +15,74 @@
   </head>
   <body>
     <!-- this is the start of content -->
-    <audio src="Assets/bark.mp3" id="animal1"></audio>
-    <audio src="Assets/meow.mp3" id="animal2"></audio>
-    <audio src="Assets/growl.mp3" id="animal3"></audio>
-    <audio src="Assets/squeak.mp3" id="animal4"></audio>
-    <audio src="Assets/bleat.mp3" id="animal5"></audio>
+    <audio src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/bark.mp3?v=1647854082304" id="animal1"></audio>
+    <audio src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/meow.mp3?v=1647854127622" id="animal2"></audio>
+    <audio src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/growl.mp3?v=1647854095241" id="animal3"></audio>
+    <audio src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/squeak.mp3?v=1647854139483" id="animal4"></audio>
+    <audio src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/bleat.mp3?v=1647854113650" id="animal5"></audio>
 
-    <h1>
-      Animal Memory Game!
-    </h1>
+    <h1>Animal Memory Game!</h1>
     <p>
-      Welcome to the Animal Memory Game! Win the game by pressing the buttons in the order in which they glow up. 
-      You lose after three mistake or if you take more than 12 seconds to input the entire pattern. 
-      The pattern will play again after every mistake.
+      Welcome to the Animal Memory Game! Win the game by pressing the buttons in
+      the order in which they glow up. You lose after three mistakes or if you
+      take more than 12 seconds to input the entire pattern. The pattern will
+      play again after every mistake.
     </p>
     <p>
-      Easy Mode: Game pattern playback is at a regular pace. <br>
+      Easy Mode: Game pattern playback is at a regular pace. <br />
       Hard Mode: Game pattern playback speeds up after every round.
     </p>
-    <p> 
+    <p>
       <button id="easyBtn" onclick="enableHardMode()">Easy Mode</button>
-      <button id="hardBtn" class="hidden" onclick="enableEasyMode()">Hard Mode</button>  </p>
+      <button id="hardBtn" class="hidden" onclick="enableEasyMode()">
+        Hard Mode
+      </button>
+    </p>
 
     <button id="startBtn" onclick="startGame()">Start</button>
     <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
-    
-    <div id="gameButtonArea"> 
-      
-        <button id="button1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone(1)"><img id="img1" src="Assets/dog.png" alt="Dog"></button>
-        <button id="button2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone(2)"><img id="img2" src="Assets/cat.png" alt="Cat"></button>
-        <button id="button3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone(3)"><img id="img3" src="Assets/bear.png" alt="Bear"></button>
-        <button id="button4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone(4)"><img id="img4" src="Assets/rat.png" alt="Rat"></button>
-        <button id="button5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone(5)"><img id="img5" src="Assets/goat.png" alt="Goat"></button>
-      
+
+    <div id="gameButtonArea">
+      <button
+        id="button1"
+        onclick="guess(1)"
+        onmousedown="startTone(1)"
+        onmouseup="stopTone(1)"
+      >
+        <img id="img1" src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/dog.png?v=1647854051740" alt="Dog" />
+      </button>
+      <button
+        id="button2"
+        onclick="guess(2)"
+        onmousedown="startTone(2)"
+        onmouseup="stopTone(2)"
+      >
+        <img id="img2" src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/cat.png?v=1647854035645" alt="Cat" />
+      </button>
+      <button
+        id="button3"
+        onclick="guess(3)"
+        onmousedown="startTone(3)"
+        onmouseup="stopTone(3)"
+      >
+        <img id="img3" src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/bear.png?v=1647854015106" alt="Bear" />
+      </button>
+      <button
+        id="button4"
+        onclick="guess(4)"
+        onmousedown="startTone(4)"
+        onmouseup="stopTone(4)"
+      >
+        <img id="img4" src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/rat.png?v=1647853984137" alt="Rat" />
+      </button>
+      <button
+        id="button5"
+        onclick="guess(5)"
+        onmousedown="startTone(5)"
+        onmouseup="stopTone(5)"
+      >
+        <img id="img5" src="https://cdn.glitch.global/9db6cb86-a6ee-4047-ac99-63e4ac0c153a/goat.png?v=1647854066444" alt="Goat" />
+      </button>
     </div>
   </body>
 </html>
